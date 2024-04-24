@@ -1,4 +1,4 @@
-# UPBGE (0.36.1) example to control a game using OSC (pythonosc)
+# UPBGE (0.36.1) - control game objects using OSC messages (simple example)
 
 1. Download this repository:
 ```
