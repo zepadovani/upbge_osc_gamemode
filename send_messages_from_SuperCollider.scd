@@ -1,7 +1,7 @@
 
 // 1. Run a routine to move the cube:
 (
-~n = NetAddr("127.0.0.1", 13333);//sending port
+~n = NetAddr("127.0.0.1", 9999);//sending port
 
 ~t1 = Routine({
 	var timewait, endOSC;

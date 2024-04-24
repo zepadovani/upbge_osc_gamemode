@@ -14,7 +14,7 @@ import queue
 # Global variables and constants
 # -----------------------------------------------------
 ip = "127.0.0.1"                     # OSC server IP address of the UPBGE game
-port = 13333                         # OSC server port
+port = 9999                          # OSC server port
 
 cont = logic.getCurrentController()  # Get the current game controller
 scene = logic.getCurrentScene()      # Get the current game scene
