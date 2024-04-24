@@ -1,3 +1,4 @@
+*.blend1
 pythonosc/
 python_osc-*/
-*.blend1
+

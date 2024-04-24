@@ -2,8 +2,6 @@
 ### It requires an "Always" sensor with Pulse True Level activated in the controller of the object that will receive the OSC messages.
 ### The script will start an OSC server in a separate thread and will listen to messages on the "/move" address.
 
-## still figuring out how to make it work in standalone mode
-
 import bge
 from bge import logic
 from pythonosc.dispatcher import Dispatcher
