@@ -37,9 +37,18 @@ def move(unused_addr, *args):
 
     global cube  # Access the global cube object
     print(f"-> frame: {cube['frame']} --- moving cube with these vals: {args}")
-    cube.position.x += args[0]
-    cube.position.y += args[1]
-    cube.position.z += args[2]
+    cube.applyMovement([args[0], args[1], args[2]],True)  # Move the cube
+
+def rotate(unused_addr, *args):
+    """Handles OSC "/rotate" messages, moving the cube.
+
+    Args:
+        unused_addr (str): The OSC address (not used here).
+        *args: A variable number of arguments representing the x, y, z rotation values.
+    """
+    global cube  # Access the global cube object
+    print(f"-> frame: {cube['frame']} --- moving cube with these vals: {args}")
+    cube.applyRotation([args[0], args[1], args[2]],True)  # Move the cube    
 
 def quit(unused_addr, *args):
     """Handles OSC "/quit" messages, initiating the server shutdown.
@@ -109,7 +118,9 @@ def main(cont):
 # OSC Setup
 # -----------------------------------------------------
 dispatcher = Dispatcher()
-dispatcher.map("/move", move)  # Map OSC addresses to handler functions
+# Map OSC addresses to handler functions
+dispatcher.map("/move", move)      
+dispatcher.map("/rotate", rotate)   
 dispatcher.map("/quit", quit)
 
 # -----------------------------------------------------

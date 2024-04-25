@@ -4,11 +4,11 @@
 ~n = NetAddr("127.0.0.1", 9999);//sending port
 
 ~t1 = Routine({
-	var timewait, endOSC;
+	var timewait, command;
 	inf.do({
-		endOSC = "/move";
-		timewait = rrand(0.1,0.5);
-		~n.sendMsg(endOSC, rrand(-0.2,0.2), rrand(-0.2,0.2), 0);
+		command = [["/move", rrand(-0.2,0.2), rrand(-0.2,0.2), 0],["/rotate", 0,0, rrand(-3,3)*90]].choose;
+		timewait = rrand(0.2,0.5);
+		~n.sendMsg(*command);
 		timewait.wait;
 	});
 }).play();
