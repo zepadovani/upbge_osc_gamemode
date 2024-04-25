@@ -1,7 +1,7 @@
 # UPBGE (0.36.1) - control game objects using OSC messages (simple example)
 https://www.youtube.com/watch?v=-7z1yCquJ2Q
 
-[<img src="https://img.youtube.com/vi/-7z1yCquJ2Q/maxresdefault.jpg" width="50%">](https://youtu.be/-7z1yCquJ2Q)
+[<img src="https://img.youtube.com/vi/-7z1yCquJ2Q/maxresdefault.jpg" width="90%">](https://youtu.be/-7z1yCquJ2Q)
 
 1. Download this repository:
 ```
